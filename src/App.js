@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Inicio from './pages/Inicio';
+import Menu from './pages/Menu';
+import Reserva from './pages/Reserva';
+import Contacto from './pages/Contacto';
+import Locacion from './pages/Locacion';
+import Header from './components/Header';
+import DetalleSopa from './components/DetalleSopa';
+import DetalleNoodle from './components/DetalleNoodles';
+import DetallePostre from './components/DetallePostres';
+import UpButton from './components/UpButton';
+import Footer from './components/Footer';
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-poppins">
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Inicio/>}/>
+        <Route path='/menu/' element={<Menu/>}/>
+        <Route path='/sopa/:sopaId' element={<DetalleSopa/>}/>
+        <Route path='/noodle/:noodleId' element={<DetalleNoodle/>}/>
+        <Route path='/postre/:postreId' element={<DetallePostre/>}/>
+        <Route path='/reserva' element={<Reserva/>}/>
+        <Route path='/contacto' element={<Contacto/>}/>
+        <Route path='/locacion' element={<Locacion/>}/>
+      </Routes>
+      <UpButton/>
+      <Footer/>
     </div>
   );
 }
 
-export default App;
