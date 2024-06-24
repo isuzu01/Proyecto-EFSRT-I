@@ -25,10 +25,10 @@ const Inicio = () => {
             </div>
             <div className="flex flex-row gap-10">
               <Link to={"/menu"}>
-                <Button title={"Menú"} styles={"bg-[#ffffff50]"} />
+                <Button title={"Menú"} styles={"bg-[#ffffff50] hover:bg-[#ffffff90]"} />
               </Link>
               <Link to={"/reserva"}>
-                <Button title={"reserva"} styles={"bg-[#ffffff50]"} />
+                <Button title={"reserva"} styles={"bg-[#ffffff50] hover:bg-[#ffffff90]"} />
               </Link>
             </div>
             <div className="pb-5">

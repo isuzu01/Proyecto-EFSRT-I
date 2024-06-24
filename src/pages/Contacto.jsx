@@ -57,12 +57,12 @@ function Contacto() {
           <form className="w-[50rem] mx-auto" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-10">
               <div className="flex flex-col">
-                <label htmlFor="nombre">correo:</label>
+                <label htmlFor="email">correo:</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Ingrese su nombre"
+                  placeholder="Ingrese su correo"
                   className="border p-2 rounded-md"
                   value={formValues.email}
                   onChange={handleChange}
